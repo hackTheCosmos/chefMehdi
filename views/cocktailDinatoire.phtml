@@ -1,0 +1,28 @@
+<?php
+$imageMenu = $data['imageMenu']; 
+$menuPdf = $data["menuPdf"];
+
+//on vérifie que les données existent
+if($imageMenu and $menuPdf){
+?>
+    
+
+    <div class = "menu_and_price__global__wrapper cocktail__menu__global__wrapper">
+        <section class ="menu__image__wrapper">
+            <a href ="" class ="back"><i class="fa-solid fa-left-long"></i></a>
+            <h2 class ="section__title">Menu</h2>
+            <img class ="menu__image" src ="./fichiersBdd/<?=$imageMenu?>" alt ="image du menu cocktail dinatoire">
+            <a title ="télécharger le menu" href = "./fichiersBdd/<?= $data['menuPdf'] ?>" download = "Menu_CocktailDinatoire_ChefMehdi.pdf">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <p>Télecharger le menu</p>
+            </a>
+        </section>
+    </div>
+    
+    <a class= " button button__link" href = "index.php?page=booking">
+        réserver
+    </a>
+<?php
+}
+?>
+

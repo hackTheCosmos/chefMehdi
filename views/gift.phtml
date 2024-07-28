@@ -1,0 +1,96 @@
+<div class ="background__wrapper">
+    <div class ="background__image gift__background__image"></div>
+    <div class ="background__text">
+        <p class ="first__header__text">Vous souhaitez offrir une prestation ?</p>
+        <p class ="second__header__text">commandez votre bon cadeau</p>    
+    </div>
+</div>
+
+<div class ="form__text">
+    <p>Veuillez remplir ce formulaire si vous souhaitez offrir un bon cadeau.</p> 
+    <p>Les champs suivis d'un (*) sont obligatoires.</p>
+    <p>Dès réception de votre demande, le chef vous contactera dans les plus brefs délais et vous recevrez votre bon cadeau par email.</p>
+</div>
+
+<form id ="gift__form" class ="large__form" method ="POST" novalidate>
+    
+    <fieldset>
+        <legend id ="name__anchor">Informations du bénéficiaire</legend>
+        <div class ="form__double__input__wrapper">
+            <div class ="form__input__wrapper" >
+                <label class ="form__label" for="name">Nom<sup>*</sup></label>
+                <input class = "form__input" id ="name" name="name" required>
+                <div class ="info__bulle__form name__info"></div>
+            </div>
+            <div class ="form__input__wrapper">
+                <label class ="form__label" for="first__name">Prénom<sup>*</sup></label>
+                <input class = "form__input" id="first__name" name="first__name" required>
+                <div class ="info__bulle__form first__name__info"></div>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend id ="name__client__anchor">Informations vous concernant</legend>
+        <div class ="form__double__input__wrapper">
+            <div class ="form__input__wrapper">
+                <label class ="form__label" for="name__client">Nom<sup>*</sup></label>
+                <input class = "form__input" id ="name__client" name="name__client" required>
+                <div class ="info__bulle__form name__client__info"></div>
+            </div>
+            <div class ="form__input__wrapper">
+                <label class ="form__label" for="first__name__client">Prénom<sup>*</sup></label>
+                <input class = "form__input" id="first__name__client" name="first__name__client" required>
+                <div class ="info__bulle__form first__name__client__info"></div>
+            </div>
+        </div>
+        <div class ="form__double__input__wrapper">
+            <div class ="form__input__wrapper">
+                <label class ="form__label" for="mail">Email<sup>*</sup></label>
+                <input class = "form__input" id ="mail" type="email" name="mail" required>
+                <div class ="info__bulle__form mail__info"></div>
+            </div>
+            <div class ="form__input__wrapper">
+                <label class ="form__label" for="phone">Téléphone<sup>*</sup></label>
+                <input class = "form__input" id="phone" type="tel" name="phone" required>
+                <div class ="info__bulle__form phone__info"></div>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend id ="details__anchor">Détails sur la prestation</legend>
+        <div class ="form__double__input__wrapper">
+            <div class ="form__input__wrapper">
+                <label class ="form__label" for="number__of__persons">Nombre de convives<sup>*</sup></label>
+                <label class ="form__label" for="number__of__persons">(&Agrave; partir de 4 persones)</label>
+                <input class = "form__input" id = "number__of__persons" type="number" min ="4" max="25" name="number__of__persons" required>
+                <div class ="info__bulle__form persons__info"></div>
+            </div>
+            <div class ="form__input__wrapper">
+                <label class ="form__label" for="menu">Menu<sup>*</sup></label>
+                <select class = "form__input" id ="menu" name ="menu" required>
+                    <option value ="">...</option>
+                    <option value= "menuGourmet">Menu Gourmet</option>
+                    <option value= "menuPrestige">Menu Prestige</option>
+                    <option value= "cocktailDinatoire">Cocktail dinatoire</option>
+                </select>
+                <div class ="info__bulle__form menu__info"></div>
+            </div>
+        </div>
+    </fieldset>
+    <div class ="form__confidentiality__text">
+        <input id = "form__checkbox" class ="form__checkbox" type ="checkbox" required>
+        En soumettant ce formulaire, vous reconnaissez avoir pris connaissance de 
+        <a href ="index.php?page=confidentiality">
+            notre politique de confidentialité
+        </a> 
+        et acceptez que vos données personnelles soient collectées et traitées conformément aux dispositions du Règlement Général sur la Protection des Données (RGPD).
+        <div class ="info__bulle__form checkbox__info"></div>
+    </div>
+    <div class="g-recaptcha" data-sitekey = "6LfWZPYoAAAAAEZS3lIoe9hhzcGuY50fjqnbEy2D"></div>
+    <div class ="info__bulle__form captcha__info"></div>
+    
+    <button class="button form__button" id ="submit__gift" type ="submit" name ="gift">envoyer</button>
+</form>
+
+<script src="script/giftForm.js"></script>
+<script src ="https://www.google.com/recaptcha/api.js"></script>

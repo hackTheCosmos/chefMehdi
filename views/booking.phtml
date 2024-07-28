@@ -1,0 +1,106 @@
+<div class ="background__wrapper">
+    <div class ="background__image booking__background__image"></div>
+    <div class ="background__text">
+        <p class ="first__header__text">Prêt pour l'expérience ?</p>
+        <p class ="second__header__text">réservez</p>   
+    </div>
+</div>
+
+<div class ="form__text">
+    <p>Veuillez remplir ce formulaire si vous souhaitez faire une demande de réservation.</p> 
+    <p>Les champs suivis d'un (*) sont obligatoires.</p>
+    <p>Dès réception de votre demande, le chef vous contactera dans les plus brefs délais.</p>
+</div>
+
+<form id ="booking__form" class ="form booking__form large__form" method ="POST" novalidate>
+    <div class ="form__double__input__wrapper">
+        <div class ="form__input__wrapper">
+            <label class ="form__label" for="name">Nom<sup>*</sup></label>
+            <input class = "form__input" id ="name" type="text" name="name" required>
+            <div class ="info__bulle__form name__info"></div>
+        </div>
+        <div class ="form__input__wrapper">
+            <label class ="form__label" for="first__name">Prénom<sup>*</sup></label>
+            <input class = "form__input" id ="first__name" type="text" name="first__name" required>
+            <div class ="info__bulle__form first__name__info"></div>
+        </div>
+    </div>
+    <div class ="form__double__input__wrapper">
+        <div class ="form__input__wrapper">
+            <label class ="form__label" for="mail">Email<sup>*</sup></label>
+            <input class = "form__input" id ="mail" type="text" name="mail" required>
+            <div class ="info__bulle__form mail__info"></div>
+        </div>
+        <div class ="form__input__wrapper">
+            <label class ="form__label" for="phone">Numéro de téléphone<sup>*</sup></label>
+            <input class = "form__input" id ="phone" type="tel" name="phone" required>
+            <div class ="info__bulle__form phone__info"></div>
+        </div>
+    </div>
+    <div class ="form__double__input__wrapper">
+        <div class ="form__input__wrapper">
+            <label class ="form__label" for="address">Adresse<sup>*</sup></label>
+            <input class = "form__input" id ="address" type="text" name="address" required>
+            <div class ="info__bulle__form address__info"></div>
+        </div>
+    </div>
+    <div class ="form__double__input__wrapper">
+        <div class ="form__input__wrapper">
+            <label class ="form__label" for="date">Date de la prestation<sup>*</sup></label>
+            <label class ="form__label" for ="date">(4 jours à l'avance minimum)</label>
+            <input class = "form__input change__input" id ="date" type="date" name="date" required>
+            <div class ="info__bulle__form date__info"></div>
+        </div>
+        <div class ="form__input__wrapper">
+            <label class ="form__label" for="time">Moment de la journée<sup>*</sup></label>
+             <select  class = "form__input change__input" id ="time" name ="time" required>
+                <option value ="">...</option>
+                <option value= "midi">Midi</option>
+                <option value= "soir">Soir</option>
+            </select>
+            <div class ="info__bulle__form time__info"></div>
+        </div>
+    </div>
+    <div class ="form__double__input__wrapper">
+        <div class ="form__input__wrapper">
+            <label class ="form__label" for="number__of__persons">Nombre de convives<sup>*</sup></label>
+            <label class ="form__label" for="number__of__persons">(&Agrave; partir de 4 persones)</label>
+            <input class = "form__input change__input" id = "number__of__persons" type="number" min ="4" max="25" name="number__of__persons" required>
+            <div class ="info__bulle__form persons__info"></div>
+        </div>
+        <div class ="form__input__wrapper">
+            <label class ="form__label" for="menu">Menu<sup>*</sup></label>
+            <select  class = "form__input change__input" id ="menu" name ="menu" required>
+                <option value ="">...</option>
+                <option value= "menuGourmet">Menu Gourmet</option>
+                <option value= "menuPrestige">Menu Prestige</option>
+                <option value= "cocktailDinatoire">Cocktail dinatoire</option>
+            </select>
+            <div class ="info__bulle__form menu__info"></div>
+        </div>
+    </div>
+    <div class ="form__double__input__wrapper">
+        <div class ="form__input__wrapper">
+            <label class ="form__label" for="bookingDetails">Votre message(1000 caractères maximum)</label>
+            <textarea class = "form__input" id="bookingDetails" name= "booking__details" maxlength="1000"></textarea>
+        </div>
+    </div>
+    <div class ="form__confidentiality__text">
+        <input id = "form__checkbox" class ="form__checkbox form__input" type ="checkbox" required>
+        
+        En soumettant ce formulaire, vous reconnaissez avoir pris connaissance de 
+        <a href ="index.php?page=confidentiality">
+            notre politique de confidentialité
+        </a> 
+        et acceptez que vos données personnelles soient collectées et traitées conformément aux dispositions du Règlement Général sur la Protection des Données (RGPD).
+        <div class ="info__bulle__form checkbox__info"></div>
+    </div>
+    <div class="g-recaptcha" data-sitekey = "6LfWZPYoAAAAAEZS3lIoe9hhzcGuY50fjqnbEy2D"></div>
+    <div class ="info__bulle__form captcha__info"></div>
+    
+    <button class="button form__button" type = submit name = "booking">envoyer</button>
+    
+</form>
+
+<script src="script/bookingForm.js"></script>
+<script src ="https://www.google.com/recaptcha/api.js"></script>

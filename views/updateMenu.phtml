@@ -1,0 +1,42 @@
+<h1 class ="satisfy__title">Modifier la carte</h1>
+
+<form id = "update__menu__form" class ="form update__menu__form large__form" enctype="multipart/form-data" method ="POST" novalidate>
+    <?php
+        //affichage d'une info bulle si le document a bien été mis à jour
+        if($data['formScore'] == 1) {
+            echo "<div class ='info__bulle__header__form display__info__bulle'>
+                le document à bien été modifié
+            </div>";
+        }
+    ?>
+    <div class ="form__double__input__wrapper">
+        <div class ="form__input__wrapper">
+            <label class ="form__label" for="menu">Choisir le menu à modifier</label>
+            <select  class = "form__input" id ="menu" name ="menu" required>
+                <option value ="">...</option>
+                <option value= "menuGourmet">Menu Gourmet</option>
+                <option value= "menuPrestige">Menu Prestige</option>
+                <option value= "cocktail">Cocktail dinatoire</option>
+            </select>
+            <div class ="info__bulle__form menu__info"></div>
+        </div>
+        <div class ="form__input__wrapper">
+            <label class ="form__label" for="file_choice">Choisir le document à modifier</label>
+            <select  class = "form__input" id ="file_choice" name ="file_choice" required>
+                <option value ="">...</option>
+                <option value= "menu_image">Image du menu</option>
+                <option value= "menu_pdf">Pdf du menu</option>
+                <option value= "menu_price_image">Image des tarifs</option>
+                <option value= "menu_price_pdf">Pdf des tarifs</option>
+            </select>
+            <div class ="info__bulle__form doc__info"></div>
+        </div>
+    </div>
+    <div class ="form__double__input__wrapper">
+        <div class ="form__input__wrapper">
+            <input class = "form__input" type="file" id ="file" name="file" required>
+            <div class ="info__bulle__form file__info"></div>
+        </div>
+    </div>
+    <button class ="button button__link" type ="submit" name ="update_file">Modifier</button>
+</form>

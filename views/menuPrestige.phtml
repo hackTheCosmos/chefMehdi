@@ -1,0 +1,38 @@
+<?php
+$imageMenu = $data['imageMenu']; 
+$menuPriceImage= $data["menuPriceImage"];
+$menuPdf = $data["menuPdf"];
+$menuPricePdf = $data["menuPricePdf"];
+
+//on vérifie que les données existent
+if($imageMenu and $menuPriceImage and $menuPdf and $menuPricePdf){
+?>
+
+    <div class ="menu_and_price__global__wrapper">
+        <section class ="menu__image__wrapper">
+            <a href ="" class ="back"><i class="fa-solid fa-left-long"></i></a>
+            <h2 class ="section__title">Menu</h2>
+            <img class ="menu__image" src ="./fichiersBdd/<?= $imageMenu ?>" alt="image du menu Prestige">
+            <a title ="télécharger le menu" href = "./fichiersBdd/<?= $menuPdf ?>" download = "Menu_Prestige_ChefMehdi.pdf">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <p>Télecharger le menu</p>
+            </a>
+        </section>
+        
+        <section class ="menu__image__wrapper">
+            <a href ="" class ="back"><i class="fa-solid fa-left-long"></i></a>
+            <h2 class ="section__title">Tarifs</h2>
+            <img class = "menu__image" src ="./fichiersBdd/<?= $menuPriceImage ?>" alt="image des tarifs">
+            <a title ="télécharger les tarifs" href = "./fichiersBdd/<?= $menuPricePdf ?>" download = "Tarifs_ChefMehdi.pdf">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <p>Télecharger les tarifs</p>
+            </a>
+        </section>
+    </div>
+    
+    <a class= " button button__link" href = "index.php?page=booking">
+        réserver
+    </a>
+<?php
+}
+?>

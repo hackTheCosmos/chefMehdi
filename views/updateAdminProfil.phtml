@@ -1,0 +1,31 @@
+<h1>Modifier mon profil</h1>
+
+<form id ="update__profil__form" class ="form update__profil__form large__form" method ="POST">
+    <div class ="form__double__input__wrapper">
+        <div class ="form__input__wrapper">
+            <label class ="form__label" for="email">Email</label>
+            <input class = "form__input" id ="email" type="email" name="email" placeholder ="<?= $data['user']->getEmail()?>"  autocomplete ="email">
+        </div>
+        
+    </div>
+    
+    <div class ="form__double__input__wrapper">
+        <div class ="form__input__wrapper">
+            <label class ="form__label" for="password1">Nouveau mot de passe</label>
+            <div class = "password__input__wrapper">
+                <input class = "form__input password__input" id="password1" type="password" name="pwd1">
+                <i class="eye__icon fa-regular fa-eye" ></i>
+            </div>
+            <div class ="info__bulle__form pass__info"></div>
+        </div>
+        <div class ="form__input__wrapper">
+            <label class ="form__label" for="password2">Confirmer le nouveau mot de passe</label>
+            <div class = "password__input__wrapper">
+                <input class = "form__input password__input" id="password2" type="password" name="pwd2">
+                <i class="eye__icon fa-regular fa-eye" ></i>
+            </div>
+            <div class ="info__bulle__form pass2__info"></div>
+        </div>
+    </div>
+    <button class ="button form__button" type = "submit" name="update_user_profil">modifier</button>
+</form>

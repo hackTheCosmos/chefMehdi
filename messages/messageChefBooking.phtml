@@ -1,0 +1,48 @@
+<?php
+
+$messageChefBooking = "
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        
+        h1 {
+            border-bottom : 1px solid #e8e0c6;
+            padding:1rem;
+            color: #2c2d6f;
+        }
+        
+        img {
+            width:12rem;
+            height:12rem;
+            border-radius:50%;
+            opacity:.7;
+     
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src='https://images.squarespace-cdn.com/content/v1/5d9b9ce07088ee0ea2b8a805/1571161374948-2S7M0RNZ98IP0PRY066E/W14_P3_Reservations_tips-1-300x225.jpg'/>
+        <h1>Demande de réservation</h1>
+        
+        <p><strong>Date:</strong>{$date}</p>
+        <p><strong>Heure:</strong> {$time}</p>
+        <p><strong>Nombre de personnes:</strong> {$numberOfPersons}</p>
+        <p><strong>Menu:</strong> {$menu}</p>
+        <p><strong>Adresse:</strong> {$address}</p>
+        <p><strong>Message:</strong> {$bookingDetails}</p> 
+        
+        <h1> Informations du client:</h1>
+        <p><strong>Nom:</strong> {$name}</p>
+        <p><strong>Prénom:</strong> {$firstName}</p> 
+        <p><strong>Email:</strong> {$mail}</p>
+        <p><strong>Téléphone:</strong> {$phone}</p>
+    </div>
+</body>
+";
+

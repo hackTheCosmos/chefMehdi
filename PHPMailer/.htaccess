@@ -1,0 +1,4 @@
+AuthName "Secure content"
+AuthType Basic
+AuthUserFile "/home/homes/theobaileche/sites/chefMehdiFinal/chefMehdiOfficialVersion/controllers/.htpasswd"
+Require valid-user

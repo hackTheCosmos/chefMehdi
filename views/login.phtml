@@ -1,0 +1,37 @@
+<div class ="sign__in__sign__up__global__wrapper">
+    <section class ="sign__in__global__wrapper">
+        <h1 class ="satisfy__title">Connexion</h1>
+        <form id = "signin__form" class="form sign__in__form" method="POST" novalidate>
+            
+            <?php
+            //affichage d'une info bulle si l'email ou le mot de passe ne sont pas dans la base de données
+            if($data['formScore'] == 1 || $data['formScore'] == 2) {
+                echo "<div class ='info__bulle__header__form display__info__bulle'>
+                    email ou mot de passe incorrect 
+                </div>";
+            }
+            ?>
+            <div class ="form__double__input__wrapper">
+                <div class ="form__input__wrapper">
+                    <label class ="form__label" for="signin__email">Email</label>
+                    <input class ="form__input" id = "signin__email" type="email" name="email" required autocomplete ="email">
+                    <div class ="info__bulle__form email__info"></div>
+                </div>
+                <div class ="form__input__wrapper">
+                    <label class ="form__label" for="signin__pass">Mot de passe</label>
+                    <div class = "password__input__wrapper">
+                        <input class = "form__input password__input" id="signin__pass" type="password" name="pwd1" required>
+                        <i class="eye__icon fa-regular fa-eye" ></i>
+                    </div>
+                    <div class ="info__bulle__form pass__info"></div>
+                </div>
+            </div>
+            <a title ="nouveau mot de passe" class="new__password__link" href="index.php?page=new-password">Mot de passe oublié ?</a>
+            
+            <div class = "signin__button__wrapper">
+                <button class ="button form__button" type="submit" name="login" value="Submit">se connecter
+                </button>
+            </div>
+            
+        </form>
+    </section>
